@@ -3,27 +3,27 @@ pub = redis.createClient(6379, '127.0.0.1');
 var datacli = redis.createClient(6379, '127.0.0.1');
 
 
-const CHANNEL2 = 'messageAdded';
-const KEY = 'test';
+const CHANNEL = 'messageAdded';
+const KEY = 'onAir';
+const START = 0;
+const END = 4;
+//
 
 //Read data from Redis Db and publish on the chanel.
 //loop OR interval.
-datacli.lrange( KEY, 0, 600, (err, chunks) => {
-    console.log("initial data!");
-    chunks.forEach(chunk => {
-        // console.log( typeof chunk);
+setInterval(()=>{publisher()},30000);
 
-          // console.log(`temp: ${chunk}`);
-        // predata = {id: `${num}`,content: "Hello Redis"};
-        // predata= `{ "icao24": "aa56da", "callsign": "UAL500"}}`;
+function publisher() {
+    let allFlights = [] ;
+    datacli.lrange( KEY,START,END, (err, chunks) => {
+        console.log("initial data!");
+        chunks.forEach(chunk => {
+            allFlights.push(chunk);
+        });
+        dataPublisher = `{"messageAdded":[ ${allFlights}]}`;
+        console.log(dataPublisher);
+        pub.publish(CHANNEL, dataPublisher);
+    });
 
-        data = `{"messageAdded": ${chunk}}`;
-        console.log (data);
-        pub.publish(CHANNEL2, data);
-    })
-});
-
-
-// PUBLISH "messageAdded" '{"messageAdded": {"icao24": "aa56da", "callsign": "UAL500"}}'
-
+}
 
