@@ -1,0 +1,46 @@
+
+//flight in jfk symolation 
+
+
+//Plane-1 
+0) RPUSH jfk "{\"icao24\":\"10\",\"longitude\":\"-73.78726\",\"latitude\":\"40.63497\",\"geo_altitude\":\"10\",\"velocity\":\"150\",\"heading\":\"180\"}"
+1) RPUSH jfk "{\"icao24\":\"10\",\"longitude\":\"-73.78539\",\"latitude\":\"40.63418\",\"geo_altitude\":\"20\",\"velocity\":\"50\",\"heading\":\"180\"}"
+2) RPUSH jfk "{\"icao24\":\"10\",\"longitude\":\"-73.78314\",\"latitude\":\"40.63311\",\"geo_altitude\":\"30\",\"velocity\":\"50\",\"heading\":\"180\"}"
+3) RPUSH jfk "{\"icao24\":\"10\",\"longitude\":\"-73.78058\",\"latitude\":\"40.63219\",\"geo_altitude\":\"10\",\"velocity\":\"50\",\"heading\":\"180\"}"
+4) RPUSH jfk "{\"icao24\":\"10\",\"longitude\":\"-73.78551\",\"latitude\":\"40.63548\",\"geo_altitude\":\"10\",\"velocity\":\"50\",\"heading\":\"180\"}"
+5) RPUSH jfk "{\"icao24\":\"10\",\"longitude\":\"-73.78198\",\"latitude\":\"40.63447\",\"geo_altitude\":\"10\",\"velocity\":\"50\",\"heading\":\"180\"}"
+6) RPUSH jfk "{\"icao24\":\"10\",\"longitude\":\"-73.78528\",\"latitude\":\"40.63498\",\"geo_altitude\":\"10\",\"velocity\":\"50\",\"heading\":\"180\"}"
+7) RPUSH jfk "{\"icao24\":\"10\",\"longitude\":\"-73.78632\",\"latitude\":\"40.63620\",\"geo_altitude\":\"10\",\"velocity\":\"50\",\"heading\":\"180\"}"
+8) RPUSH jfk "{\"icao24\":\"10\",\"longitude\":\"-73.78726\",\"latitude\":\"40.63497\",\"geo_altitude\":\"10\",\"velocity\":\"150\",\"heading\":\"180\"}"
+
+
+//plane-2 
+0) RPUSH jfk "{\"icao24\":\"11\",\"longitude\":\"-73.78615\",\"latitude\":\"40.63352\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"0\"}"
+1) RPUSH jfk "{\"icao24\":\"11\",\"longitude\":\"-73.78388\",\"latitude\":\"40.63576\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"0\"}"
+2) RPUSH jfk "{\"icao24\":\"11\",\"longitude\":\"-73.78242\",\"latitude\":\"40.63554\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"90\"}"
+3) RPUSH jfk "{\"icao24\":\"11\",\"longitude\":\"-73.78448\",\"latitude\":\"40.63332\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"90\"}"
+4) RPUSH jfk "{\"icao24\":\"11\",\"longitude\":\"-73.78100\",\"latitude\":\"40.63492\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"180\"}"
+5) RPUSH jfk "{\"icao24\":\"11\",\"longitude\":\"-73.77096\",\"latitude\":\"40.64733\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"180\"}"
+6) RPUSH jfk "{\"icao24\":\"11\",\"longitude\":\"-73.80319\",\"latitude\":\"40.64215\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"0\"}"
+7) RPUSH jfk "{\"icao24\":\"11\",\"longitude\":\"-73.79310\",\"latitude\":\"40.63081\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"0\"}"
+8) RPUSH jfk "{\"icao24\":\"11\",\"longitude\":\"-73.78632\",\"latitude\":\"40.63485\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"0\"}"
+
+
+
+
+//flight in Manhattan symolation 
+
+//plane-1
+0) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98463\",\"latitude\":\"40.75920\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"180\"}"
+1) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98507\",\"latitude\":\"40.75861\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"180\"}"
+2) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98556\",\"latitude\":\"40.75798\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"180\"}"
+3) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98600\",\"latitude\":\"40.75734\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"180\"}"
+4) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98646\",\"latitude\":\"40.75670\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"180\"}"
+5) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98697\",\"latitude\":\"40.75605\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"180\"}"
+
+6) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98646\",\"latitude\":\"40.75670\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"0\"}"
+7) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98600\",\"latitude\":\"40.75734\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"0\"}"
+8) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98556\",\"latitude\":\"40.75798\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"0\"}"
+9) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98507\",\"latitude\":\"40.75861\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"0\"}"
+
+

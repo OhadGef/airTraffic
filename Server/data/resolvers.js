@@ -2,7 +2,7 @@ import Config from '../config';
 import {RedisPubSub} from 'graphql-redis-subscriptions';
 
 
-const Redis = require('ioredis');
+// const Redis = require('ioredis');
 
 // Instantiate Redis clients
 const options = {
@@ -58,7 +58,7 @@ const resolvers = {
     },
     Subscription: {
         messageAdded: {
-            subscribe: () => pubsub.asyncIterator(CHANNEL),
+            subscribe: () => {return pubsub.asyncIterator(CHANNEL)},
         },
     },
 };
