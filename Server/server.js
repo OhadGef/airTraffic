@@ -26,6 +26,7 @@ server.use('/graphql', bodyParser.json(), graphqlExpress({
     schema
 }));
 
+
 // endpoint for browser client and test tool
 server.use('/graphiql', graphiqlExpress({
     endpointURL: '/graphql',
