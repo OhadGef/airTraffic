@@ -4,21 +4,15 @@ var datacli = redis.createClient(6379, '127.0.0.1');
 
 const config = {
     updateIntervalMs: 20000,
-};
-
+}
 const CHANNEL = 'messageAdded';
-const KEY = 'onAir';
+const KEY = 'manhattan';
 
-const NUMBER_OF_LOOPS = 15;
-const START = 0;
-const END = 0;
-
-
-
+const NUMBER_OF_LOOPS =9;
 
 function publisher(num) {
     let allFlights = [] ;
-    datacli.lrange( KEY,START,END, (err, chunks) => {
+    datacli.lrange( KEY, num, num, (err, chunks) => {
         console.log("initial data!");
         chunks.forEach(chunk => {
             allFlights.push(chunk);
@@ -27,13 +21,9 @@ function publisher(num) {
         console.log(dataPublisher);
         pub.publish(CHANNEL, dataPublisher);
     });
-
 }
 
-//Read data from Redis Db and publish on the chanel.
-//loop OR interval.
 let x=0;
-// setInterval(()=>{publisher()},20000);
 let timer =  setInterval(()=>{
     if (x>NUMBER_OF_LOOPS){
         clearInterval(timer);
@@ -41,10 +31,7 @@ let timer =  setInterval(()=>{
     }
     else {
         publisher(x);
-        x++;
+        x+=1;
     }
 },config.updateIntervalMs);
-
-// publisher();
-
 

@@ -9,7 +9,11 @@ const cl = redis.createClient();
 
 // Seting the data in redis
 
+const config = {
 
+   setIntervalMs: 15000,
+    setTimeoutMs: 5000,
+}
 
 // client.on('connect', function () {
 //     console.log('connected');
@@ -78,8 +82,8 @@ function getData (){
 
 setInterval(()=>{getData(),
     setTimeout(()=>{ clearKeyData();
-                        sendData()},10000)
-},20000);
+                        sendData()},config.setTimeoutMs)
+},config.setIntervalMs);
 
 // getData();
 // setTimeout(()=>{sendDAta()}, 5000);
