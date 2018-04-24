@@ -1,0 +1,18 @@
+[
+  {
+    //JFK - Inject the temp data from redis to JFK air port (player postion: { "x": 1353344.952433592, "y": -4654221.773484461, "z": 4131857.9765254767 }).
+    "uid": "JFK",
+    "append": true,
+    "watch": true,
+    "script": "jfk.js",
+    "sourceDir": ".//"
+  },
+  {
+    //Manhattan - Inject the temp data from redis to Manhattan (player postion: {'x': 1334835.2740264672, 'y': -4650313.671862999, 'z': 4142196.788770844}).
+    "uid": "Manhattan",
+    "append": true,
+    "watch": true,
+    "script": "manhattan.js",
+    "sourceDir": ".//"
+  }
+]

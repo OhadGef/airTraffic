@@ -1,0 +1,26 @@
+{
+  "name": "airTraficInject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "DBService.js",
+  "presets": [
+    "env"
+  ],
+  "scripts": {
+    "start": "forever ./development.json",
+    "stop": "forever stopall"
+  },
+  "keywords": [],
+  "author": "Ohad gefen",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "express": "^4.16.3",
+    "forever": "^0.15.3",
+    "forever-monitor": "^1.7.1",
+    "isomorphic-fetch": "^2.2.1",
+    "node-fetch": "^2.1.2",
+    "redis": "^2.8.0",
+    "request": "^2.83.0"
+  }
+}

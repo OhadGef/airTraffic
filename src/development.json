@@ -1,0 +1,26 @@
+[
+  {
+    // DBService - Inject the air traffic data from API to redis.
+    "uid": "DBService",
+    "append": true,
+    "watch": true,
+    "script": "DBService.js",
+    "sourceDir": ".//"
+  },
+  {
+    // publisherService - Pull the data from redis and publish in the channel.
+    "uid": "publisherService",
+    "append": true,
+    "watch": true,
+    "script": "publisherService.js",
+    "sourceDir": ".//"
+  }
+//  {
+//  //JFK - Inject the temp data from redis to JFK air port (player postion: { "x": 1353344.952433592, "y": -4654221.773484461, "z": 4131857.9765254767 }).
+//  "uid": "JFK",
+//  "append": true,
+//  "watch": true,
+//  "script": "jfkSimulation.js",
+//  "sourceDir": ".//"
+//  }
+]
