@@ -56,7 +56,7 @@ function getData (){
                         geo_altitude: x[7] !== null? JSON.stringify(x[7]) : '0.00' ,
                         // on_ground: JSON.stringify(x[8]),
                         velocity: x[9] !== null? JSON.stringify(x[9]) : '0.00' ,
-                        heading: x[10] !== null? JSON.stringify(x[10]) : '0.00' ,
+                        heading: x[10] !== null? JSON.stringify(x[10]) : '180.00' ,
                     };
                     let newData = JSON.stringify(data);
                     multi.rpush(config.KEY,newData);

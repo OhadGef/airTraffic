@@ -80,12 +80,12 @@ function clearKeyData() {
                 console.log(`The KEY: ${config.KEY} was deleted`);
                 return true;
             });
-            // const cleanList = () =>  {
-            //     cl.brpop([config.KEY,'otherlist',0], (listName, item) => {
-            //         cleanList();
-            //     });
-            //     return true;
-
+            const cleanList = () => {
+                cl.brpop([config.KEY, 'otherlist', 0], (listName, item) => {
+                    cleanList();
+                });
+                return true;
+            }
         } else {
             console.log(`The KEY: ${config.KEY} doesn\'t exist`);
             return true;

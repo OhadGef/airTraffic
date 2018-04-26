@@ -1,7 +1,7 @@
 const redis = require("redis");
 const config = require('./config');
 const pub = redis.createClient(config.port, config.host);
-var datacli = redis.createClient(config.port, config.host);
+const datacli = redis.createClient(config.port, config.host);
 
 console.log(`******************************************`);
 console.log(`start PubSub service.`);

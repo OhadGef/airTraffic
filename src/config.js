@@ -5,9 +5,9 @@ const config = {
     KEY: process.env.REDIS_KEY || 'onAir1',
     SIMULATION_KEY:  process.env.REDIS_SIMULATION_KEY ||'jfk2',
     CHANNEL: process.env.CHANNEL || 'messageAdded',
-    NUMBER_OF_LOOPS: 2 , // Infinity
+    NUMBER_OF_LOOPS: Infinity , // Infinity
     START: 0,
-    END :5,
+    END :-1,
     updateIntervalMs: 20000,
     setIntervalMs: 15000,
     setTimeoutMs: 5000,
