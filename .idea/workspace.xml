@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02682d24-abb4-43af-a7a5-2e987ec86c4f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/temp/.gitignore" afterPath="$PROJECT_DIR$/temp/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/src/test.js" afterPath="$PROJECT_DIR$/src/test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="1" column="138" lean-forward="false" selection-start-line="1" selection-start-column="138" selection-end-line="1" selection-end-column="138" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -154,10 +154,10 @@
         <option value="$PROJECT_DIR$/src/simulations/jfkSimulation.js" />
         <option value="$PROJECT_DIR$/src/simulations/newarkSimulatitonData.js" />
         <option value="$PROJECT_DIR$/src/simulations/newarkSimulation.js" />
-        <option value="$PROJECT_DIR$/src/test.js" />
         <option value="$PROJECT_DIR$/src/DBService.js" />
         <option value="$PROJECT_DIR$/src/config.js" />
         <option value="$PROJECT_DIR$/temp/.gitignore" />
+        <option value="$PROJECT_DIR$/src/test.js" />
       </list>
     </option>
   </component>
@@ -324,12 +324,12 @@
       <workItem from="1524573675680" duration="26758000" />
       <workItem from="1524723728416" duration="16695000" />
       <workItem from="1524758943448" duration="415000" />
-      <workItem from="1524981530349" duration="13883000" />
+      <workItem from="1524981530349" duration="13907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="474544000" />
+    <option name="totallyTimeSpent" value="474568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -714,14 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="1" column="138" lean-forward="false" selection-start-line="1" selection-start-column="138" selection-end-line="1" selection-end-column="138" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/publisherService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -758,6 +750,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
