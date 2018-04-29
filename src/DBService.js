@@ -53,7 +53,7 @@ function getData (){
                         icao24: x[0],
                         longitude: x[5] !== null? JSON.stringify(x[5]) : '0.00' ,
                         latitude: x[6] !== null? JSON.stringify(x[6]) : '0.00' ,
-                        geo_altitude: x[7] !== null? JSON.stringify(x[7]) : '0.00' ,
+                        geo_altitude: x[7] !== null? JSON.stringify(x[7]) : '2.50' ,
                         // on_ground: JSON.stringify(x[8]),
                         velocity: x[9] !== null? JSON.stringify(x[9]) : '0.00' ,
                         heading: x[10] !== null? JSON.stringify(x[10]) : '180.00' ,

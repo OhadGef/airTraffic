@@ -7,7 +7,7 @@ const config = {
     CHANNEL: process.env.CHANNEL || 'messageAdded',
     NUMBER_OF_LOOPS: Infinity , // Infinity
     START: 0,
-    END :-1,
+    END :100,
     updateIntervalMs: 20000,
     setIntervalMs: 15000,
     setTimeoutMs: 5000,
