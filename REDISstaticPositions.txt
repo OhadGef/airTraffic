@@ -1,5 +1,5 @@
 
-//flight in jfk symolation 
+//flight in jfk simulation
 
 
 //Plane-1 
@@ -28,7 +28,7 @@
 
 
 
-//flight in Manhattan symolation 
+//flight in Manhattan simulation
 
 //plane-1
 0) RPUSH manhattan "{\"icao24\":\"1\",\"longitude\":\"-73.98463\",\"latitude\":\"40.75920\",\"geo_altitude\":\"20\",\"velocity\":\"200\",\"heading\":\"180\"}"
