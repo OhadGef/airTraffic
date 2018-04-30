@@ -30,8 +30,6 @@ const options = {
 
 let data = [] ;
 
-
-
 setInterval(()=>{getData(),
     setTimeout(()=>{ clearAndSend()},config.setTimeoutMs)
 },config.setIntervalMs);
@@ -42,9 +40,13 @@ function getData (){
         if (err){ console.error(err)};
         console.log(`Getting data from API.`);
         const temp = JSON.parse(body);
+        let count = 0;
+
 
         temp.states.forEach(
             x => {
+                count++;
+
                 if ( x[5]  !== null ||
                      x[6]  !== null ||
                      x[6]  !== null && x[5] !== null ) // Take only flights that have position Values.
@@ -53,10 +55,10 @@ function getData (){
                         icao24: x[0],
                         longitude: x[5] !== null? JSON.stringify(x[5]) : '0.00' ,
                         latitude: x[6] !== null? JSON.stringify(x[6]) : '0.00' ,
-                        geo_altitude: x[7] !== null? JSON.stringify(x[7]) : '2.50' ,
+                        geo_altitude: x[7] !== null? JSON.stringify(x[7]) : '3.00' ,
                         // on_ground: JSON.stringify(x[8]),
                         velocity: x[9] !== null? JSON.stringify(x[9]) : '0.00' ,
-                        heading: x[10] !== null? JSON.stringify(x[10]) : '180.00' ,
+                        heading: x[10] !== null? JSON.stringify(x[10]) : '0.00' ,
                     };
                     let newData = JSON.stringify(data);
                     multi.rpush(config.KEY,newData);
@@ -67,6 +69,8 @@ function getData (){
                 }
             });
         console.log("end");
+        console.log(`count: ${count}`);
+
     });
 }
 

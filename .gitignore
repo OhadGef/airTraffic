@@ -1,5 +1,5 @@
 .idea
 /src/node_modules
-/temp
+/temp/**
 /src/test.js
 /src/package-lock.json
