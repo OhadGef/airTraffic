@@ -11,7 +11,7 @@ const cl = redis.createClient(config.port, config.host);
 
 const multi = client.multi();
 console.log(`******************************************`);
-console.log(`DB service: `);
+console.log(`starting DB service: `);
 console.log(`redis host env: ${process.env.REDIS_HOST}`);
 console.log(`redis port env: ${process.env.REDIS_PORT}`);
 console.log(`redis channel env: ${process.env.CHANNEL}`);
@@ -30,6 +30,7 @@ const options = {
 
 let data = [] ;
 
+
 setInterval(()=>{getData(),
     setTimeout(()=>{ clearAndSend()},config.setTimeoutMs)
 },config.setIntervalMs);
@@ -37,8 +38,8 @@ setInterval(()=>{getData(),
 //  ***Getting flights from api.***
 function getData (){
     request(options, function (err, res, body) {
-        if (err){ console.error(err)};
-        console.log(`Getting data from API.`);
+        if (err){ console.error(err)}
+        // console.log(`Getting data from API.`);
         const temp = JSON.parse(body);
         let count = 0;
 
@@ -68,8 +69,8 @@ function getData (){
                     // console.log(`${x[0]}null`)
                 }
             });
-        console.log("end");
-        console.log(`count: ${count}`);
+        // console.log("end");
+        // console.log(`count: ${count}`);
 
     });
 }
@@ -80,13 +81,13 @@ function clearAndSend() {
         if (err){console.error(err)};
         if (reply === 1) {
             client.del(config.KEY, function(err, reply) {
-                if (err){console.error(err)};
-                console.log(`The KEY: ${config.KEY} was deleted`);
+                if (err){console.error(err)}
+                // console.log(`The KEY: ${config.KEY} was deleted`);
                 sendData();
                 return true;
             });
         } else {
-            console.log(`The KEY: ${config.KEY} doesn\'t exist`);
+            // console.log(`The KEY: ${config.KEY} doesn\'t exist`);
             sendData();
             return true;
         }
@@ -95,11 +96,11 @@ function clearAndSend() {
 }
 
 function sendData() {
-    console.log(`Injecting new data to Redis.`);
+    // console.log(`Injecting new data to Redis.`);
 
     multi.exec((err,results) => {
         if (err){console.error(err)};
-        console.log(`exec:${results}`);
+        // console.log(`exec:${results}`);
     });
 }
 

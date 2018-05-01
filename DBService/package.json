@@ -1,0 +1,20 @@
+{
+  "name": "DBService",
+  "version": "1.0.0",
+  "description": "",
+  "main": "DBService.js",
+  "presets": [
+    "env"
+  ],
+  "scripts": {
+    "start": "node DBService.js"
+  },
+  "keywords": [],
+  "author": "Ohad gefen",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "redis": "^2.8.0",
+    "request": "^2.83.0"
+  }
+}

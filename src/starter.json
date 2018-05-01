@@ -3,11 +3,14 @@
     {
     "name"        : "DBService",
     "script"      : "./DBService.js",
-    "watch"       : true
+    "watch"       : true,
+    "min_uptime"  : 0
     },
     {
     "name"       : "publisherService",
     "script"     : "./publisherService.js",
-    "watch"       : true
-  }]
+    "watch"       : true,
+    "min_uptime"  : 0
+
+    }]
 }
