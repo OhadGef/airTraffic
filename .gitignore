@@ -1,5 +1,9 @@
 .idea
 /src/node_modules
 /temp/**
+/src/**
 /src/test.js
 /src/package-lock.json
+
+/DBService/package-lock.json
+/DBService/node_modules
