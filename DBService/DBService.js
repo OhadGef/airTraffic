@@ -39,39 +39,42 @@ setInterval(()=>{getData(),
 function getData (){
     request(options, function (err, res, body) {
         if (err){ console.error(err)}
-        // console.log(`Getting data from API.`);
-        const temp = JSON.parse(body);
-        let count = 0;
+        if(body){
+            // console.log(`Getting data from API.`);
+            const temp = JSON.parse(body);
+            let count = 0;
+
+            temp.states.forEach(
+                x => {
 
 
-        temp.states.forEach(
-            x => {
-
-
-                if ( x[5]  !== null ||
-                     x[6]  !== null ||
-                     x[6]  !== null && x[5] !== null ) // Take only flights that have position Values.
-                {
-                    // count++;
-                    data = {
-                        icao24: x[0],
-                        longitude: x[5] !== null? JSON.stringify(x[5]) : '0.00' ,
-                        latitude: x[6] !== null? JSON.stringify(x[6]) : '0.00' ,
-                        geo_altitude: x[7] !== null? JSON.stringify(x[7]) : '3.00' ,
-                        // on_ground: JSON.stringify(x[8]),
-                        velocity: x[9] !== null? JSON.stringify(x[9]) : '0.00' ,
-                        heading: x[10] !== null? JSON.stringify(x[10]) : '0.00' ,
-                    };
-                    let newData = JSON.stringify(data);
-                    multi.rpush(config.KEY,newData);
-                    // console.log(newData);
-                }
-            else {
-                    // console.log(`${x[0]}null`)
-                }
-            });
-        // console.log("end");
-        // console.log(`count: ${count}`);
+                    if ( x[5]  !== null ||
+                        x[6]  !== null ||
+                        x[6]  !== null && x[5] !== null ) // Take only flights that have position Values.
+                    {
+                        // count++;
+                        data = {
+                            icao24: x[0],
+                            longitude: x[5] !== null? JSON.stringify(x[5]) : '0.00' ,
+                            latitude: x[6] !== null? JSON.stringify(x[6]) : '0.00' ,
+                            geo_altitude: x[7] !== null? JSON.stringify(x[7]) : '3.00' ,
+                            // on_ground: JSON.stringify(x[8]),
+                            velocity: x[9] !== null? JSON.stringify(x[9]) : '0.00' ,
+                            heading: x[10] !== null? JSON.stringify(x[10]) : '0.00' ,
+                        };
+                        let newData = JSON.stringify(data);
+                        multi.rpush(config.KEY,newData);
+                        // console.log(newData);
+                    }
+                    else {
+                        // console.log(`${x[0]}null`)
+                    }
+                });
+            // console.log("end");
+            // console.log(`count: ${count}`);
+        }else {
+            console.log("the data is empty");
+        }
 
     });
 }
@@ -97,7 +100,7 @@ function clearAndSend() {
 }
 
 function sendData() {
-    console.log(`Injecting new data to Redis.`);
+    // console.log(`Injecting new data to Redis.`);
 
     multi.exec((err,results) => {
         if (err){console.error(err)};

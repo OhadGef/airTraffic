@@ -31,7 +31,7 @@ function publisher() {
     let tempFlights = [];
     // console.log(`Publisher is running on channel ${config.CHANNEL} ...`);
     datacli.lrange( config.KEY,config.START,config.END, (err, chunks) => {
-        console.log("initial data!");
+        // console.log("initial data!");
         if(err){
             console.error(err);
         }
